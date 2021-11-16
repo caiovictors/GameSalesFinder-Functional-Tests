@@ -1,0 +1,3862 @@
+23:03:39.546 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:03:40.640 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 129
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"testfunction(){ return java.lang.System.currentTimeMillis() }@outlook.com","password":"password123"}
+
+23:03:40.956 [main]  DEBUG com.intuit.karate - response time in milliseconds: 312
+1 < 400
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:03:40 GMT
+1 < Connection: close
+{"timestamp":"2021-11-16T02:03:40.893+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='signUpForm'. Error count: 1","errors":[{"codes":["Email.signUpForm.email","Email.email","Email.java.lang.String","Email"],"arguments":[{"codes":["signUpForm.email","email"],"arguments":null,"defaultMessage":"email","code":"email"},[],{"defaultMessage":".*","codes":[".*"],"arguments":null}],"defaultMessage":"email is invalid","objectName":"signUpForm","field":"email","rejectedValue":"testfunction(){ return java.lang.System.currentTimeMillis() }@outlook.com","bindingFailure":false,"code":"Email"}],"path":"/auth/signup"}
+23:03:40.961 [main]  ERROR com.intuit.karate - features/SignUp.feature:15
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 312, url: http://localhost:8080/auth/signup, response: 
+{"timestamp":"2021-11-16T02:03:40.893+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='signUpForm'. Error count: 1","errors":[{"codes":["Email.signUpForm.email","Email.email","Email.java.lang.String","Email"],"arguments":[{"codes":["signUpForm.email","email"],"arguments":null,"defaultMessage":"email","code":"email"},[],{"defaultMessage":".*","codes":[".*"],"arguments":null}],"defaultMessage":"email is invalid","objectName":"signUpForm","field":"email","rejectedValue":"testfunction(){ return java.lang.System.currentTimeMillis() }@outlook.com","bindingFailure":false,"code":"Email"}],"path":"/auth/signup"}
+features/SignUp.feature:15
+23:03:41.570 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) features/SignUp.feature
+23:04:22.483 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:04:22.630 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637028262629
+23:04:23.587 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028263351@outlook.com","password":"password123"}
+
+23:04:23.894 [main]  DEBUG com.intuit.karate - response time in milliseconds: 304
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:04:23 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d267cf7b30000","email":"test1637028263351@outlook.com"}}
+23:04:23.904 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028263351@outlook.com",
+  "password": "password123"
+}
+ 
+23:04:23.908 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d267cf7b30000",
+    "email": "test1637028263351@outlook.com"
+  }
+}
+ 
+23:04:23.923 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028263351@outlook.com","password":"password123"}
+
+23:04:23.955 [main]  DEBUG com.intuit.karate - response time in milliseconds: 31
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:04:23 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:04:23.948+00:00"}
+23:04:23.959 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028263351@outlook.com",
+  "password": "password123"
+}
+ 
+23:04:23.962 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:04:23.948+00:00"
+}
+ 
+23:04:24.530 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/SignUp.feature
+23:08:44.904 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:08:45.054 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637028525053
+23:08:46.049 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028525820@outlook.com","password":"password123"}
+
+23:08:46.158 [main]  DEBUG com.intuit.karate - response time in milliseconds: 106
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:08:46 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d2680f83c0001","email":"test1637028525820@outlook.com"}}
+23:08:46.168 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028525820@outlook.com",
+  "password": "password123"
+}
+ 
+23:08:46.171 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d2680f83c0001",
+    "email": "test1637028525820@outlook.com"
+  }
+}
+ 
+23:08:46.183 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028525820@outlook.com","password":"password123"}
+
+23:08:46.199 [main]  DEBUG com.intuit.karate - response time in milliseconds: 14
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:08:46 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:08:46.195+00:00"}
+23:08:46.203 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028525820@outlook.com",
+  "password": "password123"
+}
+ 
+23:08:46.204 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:08:46.195+00:00"
+}
+ 
+23:08:51.661 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:08:51.822 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637028531821
+23:08:52.836 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 93
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test1637028532588","email":"test1637028532585@outlook.com","password":"password123"}
+
+23:08:52.873 [main]  DEBUG com.intuit.karate - response time in milliseconds: 34
+1 < 400
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:08:52 GMT
+1 < Connection: close
+{"timestamp":"2021-11-16T02:08:52.862+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='signUpForm'. Error count: 1","errors":[{"codes":["Size.signUpForm.name","Size.name","Size.java.lang.String","Size"],"arguments":[{"codes":["signUpForm.name","name"],"arguments":null,"defaultMessage":"name","code":"name"},15,6],"defaultMessage":"name length must be between 6 and 15","objectName":"signUpForm","field":"name","rejectedValue":"test1637028532588","bindingFailure":false,"code":"Size"}],"path":"/auth/signup"}
+23:08:52.879 [main]  ERROR com.intuit.karate - features/Login.feature:20
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 34, url: http://localhost:8080/auth/signup, response: 
+{"timestamp":"2021-11-16T02:08:52.862+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='signUpForm'. Error count: 1","errors":[{"codes":["Size.signUpForm.name","Size.name","Size.java.lang.String","Size"],"arguments":[{"codes":["signUpForm.name","name"],"arguments":null,"defaultMessage":"name","code":"name"},15,6],"defaultMessage":"name length must be between 6 and 15","objectName":"signUpForm","field":"name","rejectedValue":"test1637028532588","bindingFailure":false,"code":"Size"}],"path":"/auth/signup"}
+features/Login.feature:20
+23:08:53.554 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (0 remaining) features/Login.feature
+23:08:53.571 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028533569@outlook.com","password":"password123"}
+
+23:08:53.658 [main]  DEBUG com.intuit.karate - response time in milliseconds: 85
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:08:52 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d2681158d0002","email":"test1637028533569@outlook.com"}}
+23:08:53.668 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028533569@outlook.com",
+  "password": "password123"
+}
+ 
+23:08:53.669 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d2681158d0002",
+    "email": "test1637028533569@outlook.com"
+  }
+}
+ 
+23:08:53.680 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028533569@outlook.com","password":"password123"}
+
+23:08:53.695 [main]  DEBUG com.intuit.karate - response time in milliseconds: 14
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:08:52 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:08:53.690+00:00"}
+23:08:53.699 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028533569@outlook.com",
+  "password": "password123"
+}
+ 
+23:08:53.700 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:08:53.690+00:00"
+}
+ 
+23:08:53.866 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) features/SignUp.feature
+23:08:53.869 [main]  DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+23:10:16.073 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:10:16.231 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637028616231
+23:10:17.203 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637028616962@outlook.com","password":"password123"}
+
+23:10:17.311 [main]  DEBUG com.intuit.karate - response time in milliseconds: 105
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:10:17 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26825c4e0003","email":"test1637028616962@outlook.com"}}
+23:10:17.321 [main]  INFO  com.intuit.karate - [print] {
+  "name": "test testson",
+  "email": "test1637028616962@outlook.com",
+  "password": "password123"
+}
+ 
+23:10:17.324 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26825c4e0003",
+    "email": "test1637028616962@outlook.com"
+  }
+}
+ 
+23:10:17.336 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637028616962@outlook.com",
+  "password": "password123"
+}
+ 
+23:10:17.339 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637028616962@outlook.com","password":"password123"}
+
+23:10:17.500 [main]  DEBUG com.intuit.karate - response time in milliseconds: 159
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:10:17 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26825c4e0003","email":"test1637028616962@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyODYxNjk2MkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAyOTUxN30.7dU3FO3pR6RibTiJ-GiPSbPX6FoMCaKjkqhABCT0C8kUL7MpXQwUBfPTVbdw2aIL690y1wYSMK-R7ml3SuD2SA"}
+23:10:17.504 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637028616962@outlook.com",
+  "password": "password123"
+}
+ 
+23:10:17.506 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26825c4e0003",
+    "email": "test1637028616962@outlook.com"
+  },
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyODYxNjk2MkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAyOTUxN30.7dU3FO3pR6RibTiJ-GiPSbPX6FoMCaKjkqhABCT0C8kUL7MpXQwUBfPTVbdw2aIL690y1wYSMK-R7ml3SuD2SA"
+}
+ 
+23:10:17.514 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/auth/signin
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 59
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"email":"nottest@outlook.com","password":"wrong-password"}
+
+23:10:17.601 [main]  DEBUG com.intuit.karate - response time in milliseconds: 85
+3 < 403
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Length: 0
+3 < Date: Tue, 16 Nov 2021 02:10:17 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+
+23:10:18.167 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (0 remaining) features/Login.feature
+23:10:18.184 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028618182@outlook.com","password":"password123"}
+
+23:10:18.268 [main]  DEBUG com.intuit.karate - response time in milliseconds: 83
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:10:17 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d268260120004","email":"test1637028618182@outlook.com"}}
+23:10:18.273 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028618182@outlook.com",
+  "password": "password123"
+}
+ 
+23:10:18.276 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d268260120004",
+    "email": "test1637028618182@outlook.com"
+  }
+}
+ 
+23:10:18.281 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637028618182@outlook.com","password":"password123"}
+
+23:10:18.303 [main]  DEBUG com.intuit.karate - response time in milliseconds: 20
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:10:17 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:10:18.295+00:00"}
+23:10:18.306 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637028618182@outlook.com",
+  "password": "password123"
+}
+ 
+23:10:18.309 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:10:18.295+00:00"
+}
+ 
+23:10:18.481 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) features/SignUp.feature
+23:10:18.484 [main]  DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+23:19:23.172 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:19:23.336 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029163335
+23:19:24.051 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:19:24.298 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 93
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test1637029164073","email":"test1637029164070@outlook.com","password":"password123"}
+
+23:19:24.336 [main]  DEBUG com.intuit.karate - response time in milliseconds: 34
+1 < 400
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:19:24 GMT
+1 < Connection: close
+{"timestamp":"2021-11-16T02:19:24.326+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='signUpForm'. Error count: 1","errors":[{"codes":["Size.signUpForm.name","Size.name","Size.java.lang.String","Size"],"arguments":[{"codes":["signUpForm.name","name"],"arguments":null,"defaultMessage":"name","code":"name"},15,6],"defaultMessage":"name length must be between 6 and 15","objectName":"signUpForm","field":"name","rejectedValue":"test1637029164073","bindingFailure":false,"code":"Size"}],"path":"/auth/signup"}
+23:19:24.341 [main]  ERROR com.intuit.karate - features/AddGameToWishlist.feature:20
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 34, url: http://localhost:8080/auth/signup, response: 
+{"timestamp":"2021-11-16T02:19:24.326+00:00","status":400,"error":"Bad Request","message":"Validation failed for object='signUpForm'. Error count: 1","errors":[{"codes":["Size.signUpForm.name","Size.name","Size.java.lang.String","Size"],"arguments":[{"codes":["signUpForm.name","name"],"arguments":null,"defaultMessage":"name","code":"name"},15,6],"defaultMessage":"name length must be between 6 and 15","objectName":"signUpForm","field":"name","rejectedValue":"test1637029164073","bindingFailure":false,"code":"Size"}],"path":"/auth/signup"}
+features/AddGameToWishlist.feature:20
+23:19:24.946 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (0 remaining) features/AddGameToWishlist.feature
+23:19:24.961 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029164956@outlook.com","password":"password123"}
+
+23:19:25.038 [main]  DEBUG com.intuit.karate - response time in milliseconds: 75
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:19:24 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268ab7e60005","email":"test1637029164956@outlook.com"}}
+23:19:25.048 [main]  INFO  com.intuit.karate - [print] {
+  "name": "test testson",
+  "email": "test1637029164956@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:25.050 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268ab7e60005",
+    "email": "test1637029164956@outlook.com"
+  }
+}
+ 
+23:19:25.063 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637029164956@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:25.066 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029164956@outlook.com","password":"password123"}
+
+23:19:25.138 [main]  DEBUG com.intuit.karate - response time in milliseconds: 71
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:19:24 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268ab7e60005","email":"test1637029164956@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTE2NDk1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDA2NX0.JyGNSydcO85itxQ6LIqSokk1CPWzD4qjl8CDXkRAsY4PQFBKkBmh0hvOWOUKQJuKQob0BRz3poyn6RhYn5dHBA"}
+23:19:25.142 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637029164956@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:25.144 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268ab7e60005",
+    "email": "test1637029164956@outlook.com"
+  },
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTE2NDk1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDA2NX0.JyGNSydcO85itxQ6LIqSokk1CPWzD4qjl8CDXkRAsY4PQFBKkBmh0hvOWOUKQJuKQob0BRz3poyn6RhYn5dHBA"
+}
+ 
+23:19:25.149 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/auth/signin
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 59
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"email":"nottest@outlook.com","password":"wrong-password"}
+
+23:19:25.220 [main]  DEBUG com.intuit.karate - response time in milliseconds: 70
+3 < 403
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Length: 0
+3 < Date: Tue, 16 Nov 2021 02:19:24 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+
+23:19:25.333 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 3 (0 remaining) features/Login.feature
+23:19:25.345 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637029165342@outlook.com","password":"password123"}
+
+23:19:25.436 [main]  DEBUG com.intuit.karate - response time in milliseconds: 87
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:19:25 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d268ab9720006","email":"test1637029165342@outlook.com"}}
+23:19:25.439 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637029165342@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:25.441 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d268ab9720006",
+    "email": "test1637029165342@outlook.com"
+  }
+}
+ 
+23:19:25.446 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637029165342@outlook.com","password":"password123"}
+
+23:19:25.472 [main]  DEBUG com.intuit.karate - response time in milliseconds: 25
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:19:25 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:19:25.460+00:00"}
+23:19:25.475 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637029165342@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:25.477 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:19:25.460+00:00"
+}
+ 
+23:19:25.592 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 3 (0 remaining) features/SignUp.feature
+23:19:25.594 [main]  DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+23:19:48.572 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:19:48.728 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029188728
+23:19:49.501 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:19:49.781 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029189521@outlook.com","password":"password123"}
+
+23:19:49.882 [main]  DEBUG com.intuit.karate - response time in milliseconds: 99
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:19:49 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268b18eb0007","email":"test1637029189521@outlook.com"}}
+23:19:49.898 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029189521@outlook.com","password":"password123"}
+
+23:19:49.967 [main]  DEBUG com.intuit.karate - response time in milliseconds: 67
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:19:49 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268b18eb0007","email":"test1637029189521@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTE4OTUyMUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDA4OX0.LfLPhsMGhyLcPtiELI_UonkyKO9yW4X0zX6hJ1dlZS9RC9drQHjo5PXJvvWsF3CScHHbv6irVVWhd1NbiNJI2g"}
+23:19:49.977 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTE4OTUyMUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDA4OX0.LfLPhsMGhyLcPtiELI_UonkyKO9yW4X0zX6hJ1dlZS9RC9drQHjo5PXJvvWsF3CScHHbv6irVVWhd1NbiNJI2g
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:19:50.661 [main]  DEBUG com.intuit.karate - response time in milliseconds: 682
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:19:49 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d268b18eb0007","email":"test1637029189521@outlook.com"}}
+23:19:50.673 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:19:50.676 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268b18eb0007",
+    "email": "test1637029189521@outlook.com"
+  }
+}
+ 
+23:19:51.230 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 3 (0 remaining) features/AddGameToWishlist.feature
+23:19:51.244 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029191241@outlook.com","password":"password123"}
+
+23:19:51.324 [main]  DEBUG com.intuit.karate - response time in milliseconds: 78
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:19:51 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268b1e940008","email":"test1637029191241@outlook.com"}}
+23:19:51.328 [main]  INFO  com.intuit.karate - [print] {
+  "name": "test testson",
+  "email": "test1637029191241@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:51.330 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268b1e940008",
+    "email": "test1637029191241@outlook.com"
+  }
+}
+ 
+23:19:51.335 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637029191241@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:51.338 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029191241@outlook.com","password":"password123"}
+
+23:19:51.444 [main]  DEBUG com.intuit.karate - response time in milliseconds: 104
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:19:51 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268b1e940008","email":"test1637029191241@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTE5MTI0MUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDA5MX0.hw0GgV95v-CabQ-rMra0qrie6y4e0pUYRGQqBACcUdSn7NNlNmy_qDDwz6dr7urK75VU_hhl5f00kJ7di3xJwg"}
+23:19:51.447 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637029191241@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:51.450 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268b1e940008",
+    "email": "test1637029191241@outlook.com"
+  },
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTE5MTI0MUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDA5MX0.hw0GgV95v-CabQ-rMra0qrie6y4e0pUYRGQqBACcUdSn7NNlNmy_qDDwz6dr7urK75VU_hhl5f00kJ7di3xJwg"
+}
+ 
+23:19:51.455 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/auth/signin
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 59
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"email":"nottest@outlook.com","password":"wrong-password"}
+
+23:19:51.523 [main]  DEBUG com.intuit.karate - response time in milliseconds: 67
+3 < 403
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Length: 0
+3 < Date: Tue, 16 Nov 2021 02:19:51 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+
+23:19:51.615 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 3 (0 remaining) features/Login.feature
+23:19:51.628 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637029191627@outlook.com","password":"password123"}
+
+23:19:51.715 [main]  DEBUG com.intuit.karate - response time in milliseconds: 85
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:19:51 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d268b20170009","email":"test1637029191627@outlook.com"}}
+23:19:51.719 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637029191627@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:51.720 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d268b20170009",
+    "email": "test1637029191627@outlook.com"
+  }
+}
+ 
+23:19:51.726 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637029191627@outlook.com","password":"password123"}
+
+23:19:51.750 [main]  DEBUG com.intuit.karate - response time in milliseconds: 22
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:19:51 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:19:51.745+00:00"}
+23:19:51.753 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637029191627@outlook.com",
+  "password": "password123"
+}
+ 
+23:19:51.755 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:19:51.745+00:00"
+}
+ 
+23:19:51.837 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 3 (0 remaining) features/SignUp.feature
+23:19:51.839 [main]  DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+23:21:25.126 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:21:25.279 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029285279
+23:21:26.008 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:21:26.394 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029286027@outlook.com","password":"password123"}
+
+23:21:26.521 [main]  DEBUG com.intuit.karate - response time in milliseconds: 124
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:21:26 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268c9261000a","email":"test1637029286027@outlook.com"}}
+23:21:26.537 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029286027@outlook.com","password":"password123"}
+
+23:21:26.626 [main]  DEBUG com.intuit.karate - response time in milliseconds: 87
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:21:26 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268c9261000a","email":"test1637029286027@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTI4NjAyN0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDE4Nn0.MupjGL0svbwl1XdaxyymSNH3avYSE7AHppL5768ONzH3kVPjUaQ5exG4FqM2n6Ho8CyS0hkTCefCQUJ4sIHOdw"}
+23:21:26.637 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTI4NjAyN0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDE4Nn0.MupjGL0svbwl1XdaxyymSNH3avYSE7AHppL5768ONzH3kVPjUaQ5exG4FqM2n6Ho8CyS0hkTCefCQUJ4sIHOdw
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:21:27.226 [main]  DEBUG com.intuit.karate - response time in milliseconds: 588
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:21:26 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d268c9261000a","email":"test1637029286027@outlook.com"}}
+23:21:27.237 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:21:27.239 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268c9261000a",
+    "email": "test1637029286027@outlook.com"
+  }
+}
+ 
+23:21:27.242 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'gameName' with new value: {gameName:god of wa}
+23:21:27.245 [main]  DEBUG com.intuit.karate - request:
+4 > POST http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTI4NjAyN0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDE4Nn0.MupjGL0svbwl1XdaxyymSNH3avYSE7AHppL5768ONzH3kVPjUaQ5exG4FqM2n6Ho8CyS0hkTCefCQUJ4sIHOdw
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 24
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+{"gameName":"god of wa"}
+
+23:21:27.548 [main]  DEBUG com.intuit.karate - response time in milliseconds: 302
+4 < 404
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:21:27 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Game not found","developerMessage":"Game title not found or mistyped","timestamp":"2021-11-16T02:21:27.544+00:00"}
+23:21:27.553 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of wa"
+}
+ 
+23:21:27.555 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Game not found",
+  "developerMessage": "Game title not found or mistyped",
+  "timestamp": "2021-11-16T02:21:27.544+00:00"
+}
+ 
+23:21:28.145 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/AddGameToWishlist.feature
+23:24:27.081 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:24:27.233 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029467232
+23:24:27.941 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:24:28.192 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029467960@outlook.com","password":"password123"}
+
+23:24:35.367 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:24:36.265 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:24:36.521 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029476285@outlook.com","password":"password123"}
+
+23:24:36.626 [main]  DEBUG com.intuit.karate - response time in milliseconds: 101
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:24:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268f7903000c","email":"test1637029476285@outlook.com"}}
+23:24:36.642 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029476285@outlook.com","password":"password123"}
+
+23:24:36.712 [main]  DEBUG com.intuit.karate - response time in milliseconds: 69
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:24:36 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268f7903000c","email":"test1637029476285@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTQ3NjI4NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDM3Nn0.nJidZVByFo4E6bLpg8oZZGUnHdPwt4n5jE8jIhf-JZEVnPtcZIVNS_u1wjmIRVMrkaZ0yPE3zSM4ofajpicmxA"}
+23:24:36.721 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTQ3NjI4NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDM3Nn0.nJidZVByFo4E6bLpg8oZZGUnHdPwt4n5jE8jIhf-JZEVnPtcZIVNS_u1wjmIRVMrkaZ0yPE3zSM4ofajpicmxA
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:24:38.598 [main]  DEBUG com.intuit.karate - response time in milliseconds: 1874
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:24:38 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d268f7903000c","email":"test1637029476285@outlook.com"}}
+23:24:38.615 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:24:38.620 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268f7903000c",
+    "email": "test1637029476285@outlook.com"
+  }
+}
+ 
+23:24:38.628 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTQ3NjI4NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDM3Nn0.nJidZVByFo4E6bLpg8oZZGUnHdPwt4n5jE8jIhf-JZEVnPtcZIVNS_u1wjmIRVMrkaZ0yPE3zSM4ofajpicmxA
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:24:39.244 [main]  DEBUG com.intuit.karate - response time in milliseconds: 611
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:24:38 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":4,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:24:39.252 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 4,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:24:39.258 [main]  ERROR com.intuit.karate - features/GetWishlist.feature:51
+And match response[0].gameName == "god of war"
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'God of War'
+  'god of war'
+
+features/GetWishlist.feature:51
+23:24:39.842 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) features/GetWishlist.feature
+23:25:06.259 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:25:06.408 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029506407
+23:25:07.122 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:25:07.367 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029507142@outlook.com","password":"password123"}
+
+23:25:07.470 [main]  DEBUG com.intuit.karate - response time in milliseconds: 100
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:25:07 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268ff17a000d","email":"test1637029507142@outlook.com"}}
+23:25:07.488 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029507142@outlook.com","password":"password123"}
+
+23:25:07.560 [main]  DEBUG com.intuit.karate - response time in milliseconds: 71
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:25:07 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d268ff17a000d","email":"test1637029507142@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTUwNzE0MkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQwN30.uF52Wu0QbQB6ZRx31R_89jwMjeLMTHPjv3jjWoFmOoH5U3lG0Gc-4Lt0y19ibruSGRVWhN14wIY7o1KhFYQBKQ"}
+23:25:07.571 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTUwNzE0MkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQwN30.uF52Wu0QbQB6ZRx31R_89jwMjeLMTHPjv3jjWoFmOoH5U3lG0Gc-4Lt0y19ibruSGRVWhN14wIY7o1KhFYQBKQ
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:25:08.375 [main]  DEBUG com.intuit.karate - response time in milliseconds: 802
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:25:07 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d268ff17a000d","email":"test1637029507142@outlook.com"}}
+23:25:08.392 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:25:08.395 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d268ff17a000d",
+    "email": "test1637029507142@outlook.com"
+  }
+}
+ 
+23:25:08.400 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTUwNzE0MkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQwN30.uF52Wu0QbQB6ZRx31R_89jwMjeLMTHPjv3jjWoFmOoH5U3lG0Gc-4Lt0y19ibruSGRVWhN14wIY7o1KhFYQBKQ
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:25:09.019 [main]  DEBUG com.intuit.karate - response time in milliseconds: 616
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:25:09 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":5,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:25:09.027 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 5,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:25:09.703 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/GetWishlist.feature
+23:26:07.175 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:26:07.343 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029567343
+23:26:08.076 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:26:08.336 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029568098@outlook.com","password":"password123"}
+
+23:26:08.436 [main]  DEBUG com.intuit.karate - response time in milliseconds: 96
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:26:08 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d2690dfa5000e","email":"test1637029568098@outlook.com"}}
+23:26:08.450 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029568098@outlook.com","password":"password123"}
+
+23:26:08.521 [main]  DEBUG com.intuit.karate - response time in milliseconds: 69
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:26:08 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d2690dfa5000e","email":"test1637029568098@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTU2ODA5OEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQ2OH0.b05WAkBO0rgYhmfq4wLV1Zl8Dg_GGqLxxGaixfCQnAe6h1LYX-8J-YvV6hZ9XjFFS2NxR7sxwkdsluk4Zz2GbQ"}
+23:26:08.529 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTU2ODA5OEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQ2OH0.b05WAkBO0rgYhmfq4wLV1Zl8Dg_GGqLxxGaixfCQnAe6h1LYX-8J-YvV6hZ9XjFFS2NxR7sxwkdsluk4Zz2GbQ
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:26:08.541 [main]  DEBUG com.intuit.karate - response time in milliseconds: 11
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:26:08 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+[]
+23:26:08.553 [main]  INFO  com.intuit.karate - [print] [
+]
+ 
+23:26:08.558 [main]  DEBUG com.intuit.karate - request:
+4 > POST http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTU2ODA5OEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQ2OH0.b05WAkBO0rgYhmfq4wLV1Zl8Dg_GGqLxxGaixfCQnAe6h1LYX-8J-YvV6hZ9XjFFS2NxR7sxwkdsluk4Zz2GbQ
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 25
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:26:09.139 [main]  DEBUG com.intuit.karate - response time in milliseconds: 579
+4 < 201
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:26:08 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d2690dfa5000e","email":"test1637029568098@outlook.com"}}
+23:26:09.142 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:26:09.144 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d2690dfa5000e",
+    "email": "test1637029568098@outlook.com"
+  }
+}
+ 
+23:26:09.149 [main]  DEBUG com.intuit.karate - request:
+5 > GET http://localhost:8080/wishlist
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTU2ODA5OEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDQ2OH0.b05WAkBO0rgYhmfq4wLV1Zl8Dg_GGqLxxGaixfCQnAe6h1LYX-8J-YvV6hZ9XjFFS2NxR7sxwkdsluk4Zz2GbQ
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:26:09.741 [main]  DEBUG com.intuit.karate - response time in milliseconds: 590
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:26:09 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+[{"wishlistGameId":6,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:26:09.745 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 6,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:26:10.381 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/GetWishlist.feature
+23:29:42.641 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:29:42.802 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029782801
+23:29:43.535 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:29:43.789 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029783555@outlook.com","password":"password123"}
+
+23:29:43.894 [main]  DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:29:43 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26942945000f","email":"test1637029783555@outlook.com"}}
+23:29:43.913 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029783555@outlook.com","password":"password123"}
+
+23:29:43.987 [main]  DEBUG com.intuit.karate - response time in milliseconds: 72
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:29:43 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26942945000f","email":"test1637029783555@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTc4MzU1NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDY4M30.RfheknyWc1La90Tz_1-46gVUePRGgFqUOxcvDR-1Ev5cblGJ2WIM1yKN-192VPkekEUoVcI4TItEjXEgS5Zarg"}
+23:29:43.998 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTc4MzU1NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDY4M30.RfheknyWc1La90Tz_1-46gVUePRGgFqUOxcvDR-1Ev5cblGJ2WIM1yKN-192VPkekEUoVcI4TItEjXEgS5Zarg
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:29:44.608 [main]  DEBUG com.intuit.karate - response time in milliseconds: 608
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:29:43 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d26942945000f","email":"test1637029783555@outlook.com"}}
+23:29:44.616 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:29:44.620 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26942945000f",
+    "email": "test1637029783555@outlook.com"
+  }
+}
+ 
+23:29:44.625 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTc4MzU1NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDY4M30.RfheknyWc1La90Tz_1-46gVUePRGgFqUOxcvDR-1Ev5cblGJ2WIM1yKN-192VPkekEUoVcI4TItEjXEgS5Zarg
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:29:45.196 [main]  DEBUG com.intuit.karate - response time in milliseconds: 569
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:29:45 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":7,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:29:45.202 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 7,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:29:45.215 [main]  DEBUG com.intuit.karate - request:
+5 > DELETE http://localhost:8080/wishlist/7
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTc4MzU1NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDY4M30.RfheknyWc1La90Tz_1-46gVUePRGgFqUOxcvDR-1Ev5cblGJ2WIM1yKN-192VPkekEUoVcI4TItEjXEgS5Zarg
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:29:45.262 [main]  DEBUG com.intuit.karate - response time in milliseconds: 45
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:29:45 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"id":7,"gameName":"god of war","user":{"id":"2c9380837d267619017d26942945000f","name":"test testson","email":"test1637029783555@outlook.com","password":"$2a$10$HJBl4m9ovW/MfLBS8e6Xg.aLpjIP5QobnucTty9lVrLq34lFkCEcG"}}
+23:29:45.265 [main]  INFO  com.intuit.karate - [print] {
+  "id": 7,
+  "gameName": "god of war",
+  "user": {
+    "id": "2c9380837d267619017d26942945000f",
+    "name": "test testson",
+    "email": "test1637029783555@outlook.com",
+    "password": "$2a$10$HJBl4m9ovW/MfLBS8e6Xg.aLpjIP5QobnucTty9lVrLq34lFkCEcG"
+  }
+}
+ 
+23:29:45.268 [main]  ERROR com.intuit.karate - features/DeleteGameFromWishlist.feature:59
+And match response.gameName == "God of War"
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'god of war'
+  'God of War'
+
+features/DeleteGameFromWishlist.feature:59
+23:29:45.927 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) features/DeleteGameFromWishlist.feature
+23:30:08.891 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:30:09.044 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029809044
+23:30:09.749 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:30:10.012 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029809769@outlook.com","password":"password123"}
+
+23:30:10.112 [main]  DEBUG com.intuit.karate - response time in milliseconds: 98
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:30:10 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26948faf0010","email":"test1637029809769@outlook.com"}}
+23:30:10.129 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029809769@outlook.com","password":"password123"}
+
+23:30:10.201 [main]  DEBUG com.intuit.karate - response time in milliseconds: 70
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:30:10 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26948faf0010","email":"test1637029809769@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTgwOTc2OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDcxMH0.EkAMT49TCPmPbkKxgzQEsZfsUe4a89oF7z9wLgpvA7z7S7auCHL5eKrmI9ky47fU3nSFS4jXd1htlzPoIpnmJw"}
+23:30:10.210 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTgwOTc2OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDcxMH0.EkAMT49TCPmPbkKxgzQEsZfsUe4a89oF7z9wLgpvA7z7S7auCHL5eKrmI9ky47fU3nSFS4jXd1htlzPoIpnmJw
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:30:10.823 [main]  DEBUG com.intuit.karate - response time in milliseconds: 611
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:30:10 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d26948faf0010","email":"test1637029809769@outlook.com"}}
+23:30:10.834 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:30:10.838 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26948faf0010",
+    "email": "test1637029809769@outlook.com"
+  }
+}
+ 
+23:30:10.842 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTgwOTc2OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDcxMH0.EkAMT49TCPmPbkKxgzQEsZfsUe4a89oF7z9wLgpvA7z7S7auCHL5eKrmI9ky47fU3nSFS4jXd1htlzPoIpnmJw
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:30:11.442 [main]  DEBUG com.intuit.karate - response time in milliseconds: 598
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:30:11 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":8,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:30:11.452 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 8,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:30:11.462 [main]  DEBUG com.intuit.karate - request:
+5 > DELETE http://localhost:8080/wishlist/8
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTgwOTc2OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDcxMH0.EkAMT49TCPmPbkKxgzQEsZfsUe4a89oF7z9wLgpvA7z7S7auCHL5eKrmI9ky47fU3nSFS4jXd1htlzPoIpnmJw
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:30:11.488 [main]  DEBUG com.intuit.karate - response time in milliseconds: 23
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:30:11 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"id":8,"gameName":"god of war","user":{"id":"2c9380837d267619017d26948faf0010","name":"test testson","email":"test1637029809769@outlook.com","password":"$2a$10$L51GH3DK8jmY3mfqBz7W/u/pQwKP3lurxyCKhYd9qrcSr7WOnhFQy"}}
+23:30:11.491 [main]  INFO  com.intuit.karate - [print] {
+  "id": 8,
+  "gameName": "god of war",
+  "user": {
+    "id": "2c9380837d267619017d26948faf0010",
+    "name": "test testson",
+    "email": "test1637029809769@outlook.com",
+    "password": "$2a$10$L51GH3DK8jmY3mfqBz7W/u/pQwKP3lurxyCKhYd9qrcSr7WOnhFQy"
+  }
+}
+ 
+23:30:12.093 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/DeleteGameFromWishlist.feature
+23:31:24.634 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:31:24.788 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637029884787
+23:31:25.534 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:31:25.789 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637029885556@outlook.com","password":"password123"}
+
+23:31:25.890 [main]  DEBUG com.intuit.karate - response time in milliseconds: 98
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:31:25 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d2695b7b40011","email":"test1637029885556@outlook.com"}}
+23:31:25.904 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637029885556@outlook.com","password":"password123"}
+
+23:31:25.981 [main]  DEBUG com.intuit.karate - response time in milliseconds: 75
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:31:25 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d2695b7b40011","email":"test1637029885556@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTg4NTU1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDc4NX0.COAzRGDXTi5eB3tRSoxAaPzv_Oo0qP3Za4CjEvdyH9t9HflsDpqLuTzMnWX4jmYrw2UE44-FZcB9ExkkJFk-oA"}
+23:31:25.994 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTg4NTU1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDc4NX0.COAzRGDXTi5eB3tRSoxAaPzv_Oo0qP3Za4CjEvdyH9t9HflsDpqLuTzMnWX4jmYrw2UE44-FZcB9ExkkJFk-oA
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:31:26.676 [main]  DEBUG com.intuit.karate - response time in milliseconds: 679
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:31:25 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d2695b7b40011","email":"test1637029885556@outlook.com"}}
+23:31:26.688 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:31:26.690 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d2695b7b40011",
+    "email": "test1637029885556@outlook.com"
+  }
+}
+ 
+23:31:26.695 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTg4NTU1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDc4NX0.COAzRGDXTi5eB3tRSoxAaPzv_Oo0qP3Za4CjEvdyH9t9HflsDpqLuTzMnWX4jmYrw2UE44-FZcB9ExkkJFk-oA
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:31:27.248 [main]  DEBUG com.intuit.karate - response time in milliseconds: 551
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:31:27 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":9,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:31:27.251 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 9,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:31:27.263 [main]  DEBUG com.intuit.karate - request:
+5 > DELETE http://localhost:8080/wishlist/9
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTg4NTU1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDc4NX0.COAzRGDXTi5eB3tRSoxAaPzv_Oo0qP3Za4CjEvdyH9t9HflsDpqLuTzMnWX4jmYrw2UE44-FZcB9ExkkJFk-oA
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:31:27.293 [main]  DEBUG com.intuit.karate - response time in milliseconds: 29
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:31:27 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"id":9,"gameName":"god of war","user":{"id":"2c9380837d267619017d2695b7b40011","name":"test testson","email":"test1637029885556@outlook.com","password":"$2a$10$JTGZ0ABLoHpwnn/3ctyiIuXp4QmlZGAcqMlgEdtDglQgrgKvyBeVC"}}
+23:31:27.297 [main]  INFO  com.intuit.karate - [print] {
+  "id": 9,
+  "gameName": "god of war",
+  "user": {
+    "id": "2c9380837d267619017d2695b7b40011",
+    "name": "test testson",
+    "email": "test1637029885556@outlook.com",
+    "password": "$2a$10$JTGZ0ABLoHpwnn/3ctyiIuXp4QmlZGAcqMlgEdtDglQgrgKvyBeVC"
+  }
+}
+ 
+23:31:27.304 [main]  DEBUG com.intuit.karate - request:
+6 > DELETE http://localhost:8080/wishlist/99999999
+6 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAyOTg4NTU1NkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMDc4NX0.COAzRGDXTi5eB3tRSoxAaPzv_Oo0qP3Za4CjEvdyH9t9HflsDpqLuTzMnWX4jmYrw2UE44-FZcB9ExkkJFk-oA
+6 > Host: localhost:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+6 > Accept-Encoding: gzip,deflate
+
+
+23:31:27.358 [main]  DEBUG com.intuit.karate - response time in milliseconds: 51
+6 < 404
+6 < Vary: Origin
+6 < Vary: Access-Control-Request-Method
+6 < Vary: Access-Control-Request-Headers
+6 < X-Content-Type-Options: nosniff
+6 < X-XSS-Protection: 1; mode=block
+6 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+6 < Pragma: no-cache
+6 < Expires: 0
+6 < X-Frame-Options: DENY
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Tue, 16 Nov 2021 02:31:27 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Wishlist id not found","developerMessage":"The id: 99999999 doesn't exists on your wishlist","timestamp":"2021-11-16T02:31:27.347+00:00"}
+23:31:27.361 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Wishlist id not found",
+  "developerMessage": "The id: 99999999 doesn't exists on your wishlist",
+  "timestamp": "2021-11-16T02:31:27.347+00:00"
+}
+ 
+23:31:28.010 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/DeleteGameFromWishlist.feature
+23:36:50.201 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:36:50.353 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637030210352
+23:36:51.122 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:36:51.372 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030211144@outlook.com","password":"password123"}
+
+23:36:51.479 [main]  DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:36:51 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269aaf830012","email":"test1637030211144@outlook.com"}}
+23:36:51.493 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030211144@outlook.com","password":"password123"}
+
+23:36:51.565 [main]  DEBUG com.intuit.karate - response time in milliseconds: 70
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:36:51 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269aaf830012","email":"test1637030211144@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDIxMTE0NEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTExMX0.gJMuyLZ5LcilN-Ml2u7a1O78G5vBc8fk5O4rex-UMcZvVG-39DhRMLjZdt6m4fy2rusLUbOCsHdZEAPOA--bzQ"}
+23:36:51.575 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDIxMTE0NEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTExMX0.gJMuyLZ5LcilN-Ml2u7a1O78G5vBc8fk5O4rex-UMcZvVG-39DhRMLjZdt6m4fy2rusLUbOCsHdZEAPOA--bzQ
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:36:53.912 [main]  DEBUG com.intuit.karate - response time in milliseconds: 2335
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:36:53 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d269aaf830012","email":"test1637030211144@outlook.com"}}
+23:36:53.923 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:36:53.926 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d269aaf830012",
+    "email": "test1637030211144@outlook.com"
+  }
+}
+ 
+23:36:53.932 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDIxMTE0NEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTExMX0.gJMuyLZ5LcilN-Ml2u7a1O78G5vBc8fk5O4rex-UMcZvVG-39DhRMLjZdt6m4fy2rusLUbOCsHdZEAPOA--bzQ
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:36:54.555 [main]  DEBUG com.intuit.karate - response time in milliseconds: 622
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:36:53 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":10,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:36:54.563 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 10,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:36:54.578 [main]  DEBUG com.intuit.karate - request:
+5 > DELETE http://localhost:8080/wishlist/10
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDIxMTE0NEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTExMX0.gJMuyLZ5LcilN-Ml2u7a1O78G5vBc8fk5O4rex-UMcZvVG-39DhRMLjZdt6m4fy2rusLUbOCsHdZEAPOA--bzQ
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:36:54.601 [main]  DEBUG com.intuit.karate - response time in milliseconds: 21
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:36:53 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"id":10,"gameName":"god of war","user":{"id":"2c9380837d267619017d269aaf830012","name":"test testson","email":"test1637030211144@outlook.com","password":"$2a$10$iZptwftgEb3NHdVmL12iae9bU6lF0OoRtAGblczcwK3Y5wjVlUkVS"}}
+23:36:54.605 [main]  INFO  com.intuit.karate - [print] {
+  "id": 10,
+  "gameName": "god of war",
+  "user": {
+    "id": "2c9380837d267619017d269aaf830012",
+    "name": "test testson",
+    "email": "test1637030211144@outlook.com",
+    "password": "$2a$10$iZptwftgEb3NHdVmL12iae9bU6lF0OoRtAGblczcwK3Y5wjVlUkVS"
+  }
+}
+ 
+23:36:54.610 [main]  DEBUG com.intuit.karate - request:
+6 > DELETE http://localhost:8080/wishlist/10
+6 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDIxMTE0NEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTExMX0.gJMuyLZ5LcilN-Ml2u7a1O78G5vBc8fk5O4rex-UMcZvVG-39DhRMLjZdt6m4fy2rusLUbOCsHdZEAPOA--bzQ
+6 > Host: localhost:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+6 > Accept-Encoding: gzip,deflate
+
+
+23:36:54.624 [main]  DEBUG com.intuit.karate - response time in milliseconds: 13
+6 < 404
+6 < Vary: Origin
+6 < Vary: Access-Control-Request-Method
+6 < Vary: Access-Control-Request-Headers
+6 < X-Content-Type-Options: nosniff
+6 < X-XSS-Protection: 1; mode=block
+6 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+6 < Pragma: no-cache
+6 < Expires: 0
+6 < X-Frame-Options: DENY
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Tue, 16 Nov 2021 02:36:53 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Wishlist id not found","developerMessage":"The id: 10 doesn't exists on your wishlist","timestamp":"2021-11-16T02:36:54.620+00:00"}
+23:36:54.628 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Wishlist id not found",
+  "developerMessage": "The id: 10 doesn't exists on your wishlist",
+  "timestamp": "2021-11-16T02:36:54.620+00:00"
+}
+ 
+23:36:55.291 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/DeleteGameFromWishlist.feature
+23:39:58.744 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:39:58.891 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637030398890
+23:39:59.619 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:39:59.854 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030399638@outlook.com","password":"password123"}
+
+23:39:59.956 [main]  DEBUG com.intuit.karate - response time in milliseconds: 98
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:39:59 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269d8fc20013","email":"test1637030399638@outlook.com"}}
+23:39:59.973 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030399638@outlook.com","password":"password123"}
+
+23:40:00.047 [main]  DEBUG com.intuit.karate - response time in milliseconds: 72
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:39:59 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269d8fc20013","email":"test1637030399638@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDM5OTYzOEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTMwMH0.t9rUJDF5gXmMuXdl8N11MUN-d8JreKnl_KT1VbMhvuXz3HT6kqnjGaLvwZuByv_uOePSNCO0GgvM8Pg95ozCIg"}
+23:40:00.058 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/game/title=god%20of%20war
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDM5OTYzOEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTMwMH0.t9rUJDF5gXmMuXdl8N11MUN-d8JreKnl_KT1VbMhvuXz3HT6kqnjGaLvwZuByv_uOePSNCO0GgvM8Pg95ozCIg
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:40:00.606 [main]  DEBUG com.intuit.karate - response time in milliseconds: 547
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:39:59 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+23:40:00.622 [main]  INFO  com.intuit.karate - [print] {
+  "game": {
+    "internalName": "GODOFWAR",
+    "title": "God of War",
+    "metacriticLink": "/game/pc/god-of-war",
+    "storeID": "23",
+    "gameID": "236053",
+    "salePrice": "41.48",
+    "normalPrice": "49.99",
+    "isOnSale": "1",
+    "savings": "17.023405",
+    "metacriticScore": "0",
+    "steamRatingText": null,
+    "steamRatingPercent": "0",
+    "steamRatingCount": "0",
+    "steamAppID": "1593500",
+    "releaseDate": 1642118400,
+    "lastChange": 1636387054,
+    "dealRating": "2.3",
+    "thumb": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"
+  },
+  "stores": [
+    {
+      "storeID": "23",
+      "storeName": "GameBillet",
+      "isActive": true
+    }
+  ]
+}
+ 
+23:40:01.190 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/FindGame.feature
+23:41:23.231 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:41:23.381 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637030483381
+23:41:24.096 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:41:24.388 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030484119@outlook.com","password":"password123"}
+
+23:41:24.495 [main]  DEBUG com.intuit.karate - response time in milliseconds: 104
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:41:24 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269ed9fc0014","email":"test1637030484119@outlook.com"}}
+23:41:24.511 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030484119@outlook.com","password":"password123"}
+
+23:41:24.581 [main]  DEBUG com.intuit.karate - response time in milliseconds: 68
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:41:24 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269ed9fc0014","email":"test1637030484119@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDQ4NDExOUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTM4NH0.36Vy2yPdelwgZELC1xXktrarrXID5yZtpA0H1V8KJS1IEJg7XoYViX-AHHCcIPfDENdmeOFLmIBU2LkbHfMM6g"}
+23:41:24.594 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/game/title=god%20of%20war
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDQ4NDExOUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTM4NH0.36Vy2yPdelwgZELC1xXktrarrXID5yZtpA0H1V8KJS1IEJg7XoYViX-AHHCcIPfDENdmeOFLmIBU2LkbHfMM6g
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:41:25.170 [main]  DEBUG com.intuit.karate - response time in milliseconds: 574
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:41:24 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+23:41:25.191 [main]  INFO  com.intuit.karate - [print] {
+  "game": {
+    "internalName": "GODOFWAR",
+    "title": "God of War",
+    "metacriticLink": "/game/pc/god-of-war",
+    "storeID": "23",
+    "gameID": "236053",
+    "salePrice": "41.48",
+    "normalPrice": "49.99",
+    "isOnSale": "1",
+    "savings": "17.023405",
+    "metacriticScore": "0",
+    "steamRatingText": null,
+    "steamRatingPercent": "0",
+    "steamRatingCount": "0",
+    "steamAppID": "1593500",
+    "releaseDate": 1642118400,
+    "lastChange": 1636387054,
+    "dealRating": "2.3",
+    "thumb": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"
+  },
+  "stores": [
+    {
+      "storeID": "23",
+      "storeName": "GameBillet",
+      "isActive": true
+    }
+  ]
+}
+ 
+23:41:25.198 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/game/title=god%20of%20war
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDQ4NDExOUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTM4NH0.36Vy2yPdelwgZELC1xXktrarrXID5yZtpA0H1V8KJS1IEJg7XoYViX-AHHCcIPfDENdmeOFLmIBU2LkbHfMM6g
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:41:25.751 [main]  DEBUG com.intuit.karate - response time in milliseconds: 551
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:41:25 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+23:41:25.754 [main]  ERROR com.intuit.karate - features/FindGame.feature:48
+Then status 404
+status code was: 200, expected: 404, response time in milliseconds: 551, url: http://localhost:8080/game/title=god%20of%20war, response: 
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+features/FindGame.feature:48
+23:41:26.386 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) features/FindGame.feature
+23:42:07.601 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:42:07.753 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637030527752
+23:42:08.484 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:42:08.729 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030528502@outlook.com","password":"password123"}
+
+23:42:08.829 [main]  DEBUG com.intuit.karate - response time in milliseconds: 96
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:42:08 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269f872e0015","email":"test1637030528502@outlook.com"}}
+23:42:08.846 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030528502@outlook.com","password":"password123"}
+
+23:42:08.923 [main]  DEBUG com.intuit.karate - response time in milliseconds: 76
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:42:08 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d269f872e0015","email":"test1637030528502@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDUyODUwMkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQyOH0.zl-S3nlKoZLjcgKIeaBXh-YFfbPAl0mv6-vKS2M4_sRC7cClf1akxRGNUgWGA_MlShQun5QYfjHp_vikr2kU9A"}
+23:42:08.934 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/game/title=god%20of%20war
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDUyODUwMkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQyOH0.zl-S3nlKoZLjcgKIeaBXh-YFfbPAl0mv6-vKS2M4_sRC7cClf1akxRGNUgWGA_MlShQun5QYfjHp_vikr2kU9A
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:42:09.592 [main]  DEBUG com.intuit.karate - response time in milliseconds: 657
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:42:08 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+23:42:09.620 [main]  INFO  com.intuit.karate - [print] {
+  "game": {
+    "internalName": "GODOFWAR",
+    "title": "God of War",
+    "metacriticLink": "/game/pc/god-of-war",
+    "storeID": "23",
+    "gameID": "236053",
+    "salePrice": "41.48",
+    "normalPrice": "49.99",
+    "isOnSale": "1",
+    "savings": "17.023405",
+    "metacriticScore": "0",
+    "steamRatingText": null,
+    "steamRatingPercent": "0",
+    "steamRatingCount": "0",
+    "steamAppID": "1593500",
+    "releaseDate": 1642118400,
+    "lastChange": 1636387054,
+    "dealRating": "2.3",
+    "thumb": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"
+  },
+  "stores": [
+    {
+      "storeID": "23",
+      "storeName": "GameBillet",
+      "isActive": true
+    }
+  ]
+}
+ 
+23:42:09.629 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/game/title=god%20of%20wa
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDUyODUwMkBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQyOH0.zl-S3nlKoZLjcgKIeaBXh-YFfbPAl0mv6-vKS2M4_sRC7cClf1akxRGNUgWGA_MlShQun5QYfjHp_vikr2kU9A
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:42:09.938 [main]  DEBUG com.intuit.karate - response time in milliseconds: 307
+4 < 404
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:42:09 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Game not found","developerMessage":"Game title not found or mistyped","timestamp":"2021-11-16T02:42:09.929+00:00"}
+23:42:09.952 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Game not found",
+  "developerMessage": "Game title not found or mistyped",
+  "timestamp": "2021-11-16T02:42:09.929+00:00"
+}
+ 
+23:42:09.955 [main]  ERROR com.intuit.karate - features/FindGame.feature:51
+And match response.details == "Game title not found or mistyped"
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'Game not found'
+  'Game title not found or mistyped'
+
+features/FindGame.feature:51
+23:42:10.522 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) features/FindGame.feature
+23:42:43.666 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:42:43.824 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637030563824
+23:42:44.545 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:42:44.861 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030564571@outlook.com","password":"password123"}
+
+23:42:44.963 [main]  DEBUG com.intuit.karate - response time in milliseconds: 99
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:42:44 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a014500016","email":"test1637030564571@outlook.com"}}
+23:42:44.980 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030564571@outlook.com","password":"password123"}
+
+23:42:45.066 [main]  DEBUG com.intuit.karate - response time in milliseconds: 83
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:42:44 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a014500016","email":"test1637030564571@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU2NDU3MUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ2NX0.ySkaox2GJSA73mSdrHK_ssR_DGn3pGPmcmUWP4ez95_4Ow12e8D4qxOfK4JYTv8S83HKwcBskKK7VreqDjuTnw"}
+23:42:45.078 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/game/title=god%20of%20war
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU2NDU3MUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ2NX0.ySkaox2GJSA73mSdrHK_ssR_DGn3pGPmcmUWP4ez95_4Ow12e8D4qxOfK4JYTv8S83HKwcBskKK7VreqDjuTnw
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:42:50.638 [main]  DEBUG com.intuit.karate - response time in milliseconds: 5557
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:42:50 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+23:42:50.662 [main]  INFO  com.intuit.karate - [print] {
+  "game": {
+    "internalName": "GODOFWAR",
+    "title": "God of War",
+    "metacriticLink": "/game/pc/god-of-war",
+    "storeID": "23",
+    "gameID": "236053",
+    "salePrice": "41.48",
+    "normalPrice": "49.99",
+    "isOnSale": "1",
+    "savings": "17.023405",
+    "metacriticScore": "0",
+    "steamRatingText": null,
+    "steamRatingPercent": "0",
+    "steamRatingCount": "0",
+    "steamAppID": "1593500",
+    "releaseDate": 1642118400,
+    "lastChange": 1636387054,
+    "dealRating": "2.3",
+    "thumb": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"
+  },
+  "stores": [
+    {
+      "storeID": "23",
+      "storeName": "GameBillet",
+      "isActive": true
+    }
+  ]
+}
+ 
+23:42:50.671 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/game/title=god%20of%20wa
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU2NDU3MUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ2NX0.ySkaox2GJSA73mSdrHK_ssR_DGn3pGPmcmUWP4ez95_4Ow12e8D4qxOfK4JYTv8S83HKwcBskKK7VreqDjuTnw
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:42:50.977 [main]  DEBUG com.intuit.karate - response time in milliseconds: 304
+4 < 404
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:42:50 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Game not found","developerMessage":"Game title not found or mistyped","timestamp":"2021-11-16T02:42:50.970+00:00"}
+23:42:50.986 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Game not found",
+  "developerMessage": "Game title not found or mistyped",
+  "timestamp": "2021-11-16T02:42:50.970+00:00"
+}
+ 
+23:42:51.699 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) features/FindGame.feature
+23:43:04.722 [main]  INFO  com.intuit.karate - Karate version: 1.1.0
+23:43:04.905 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1637030584904
+23:43:05.627 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:43:05.880 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030585645@outlook.com","password":"password123"}
+
+23:43:05.981 [main]  DEBUG com.intuit.karate - response time in milliseconds: 98
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:43:05 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a0666b0017","email":"test1637030585645@outlook.com"}}
+23:43:05.999 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030585645@outlook.com","password":"password123"}
+
+23:43:06.071 [main]  DEBUG com.intuit.karate - response time in milliseconds: 71
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:43:05 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a0666b0017","email":"test1637030585645@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NTY0NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4Nn0.klPOYjVtJWDAZBjnBsrJ6Y6Z-gUkUzPIfm0CyQY-9dWHSfeKI0LVw-Kv8rajZv1YazjMqK-ox9dAyGqV3zMu6A"}
+23:43:06.081 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NTY0NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4Nn0.klPOYjVtJWDAZBjnBsrJ6Y6Z-gUkUzPIfm0CyQY-9dWHSfeKI0LVw-Kv8rajZv1YazjMqK-ox9dAyGqV3zMu6A
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:43:06.684 [main]  DEBUG com.intuit.karate - response time in milliseconds: 601
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:43:05 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d26a0666b0017","email":"test1637030585645@outlook.com"}}
+23:43:06.696 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:43:06.699 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26a0666b0017",
+    "email": "test1637030585645@outlook.com"
+  }
+}
+ 
+23:43:06.704 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'gameName' with new value: {gameName:god of wa}
+23:43:06.707 [main]  DEBUG com.intuit.karate - request:
+4 > POST http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NTY0NUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4Nn0.klPOYjVtJWDAZBjnBsrJ6Y6Z-gUkUzPIfm0CyQY-9dWHSfeKI0LVw-Kv8rajZv1YazjMqK-ox9dAyGqV3zMu6A
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 24
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+{"gameName":"god of wa"}
+
+23:43:07.011 [main]  DEBUG com.intuit.karate - response time in milliseconds: 302
+4 < 404
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:43:07 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Game not found","developerMessage":"Game title not found or mistyped","timestamp":"2021-11-16T02:43:07.004+00:00"}
+23:43:07.021 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of wa"
+}
+ 
+23:43:07.023 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Game not found",
+  "developerMessage": "Game title not found or mistyped",
+  "timestamp": "2021-11-16T02:43:07.004+00:00"
+}
+ 
+23:43:07.664 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 6 (0 remaining) features/AddGameToWishlist.feature
+23:43:07.675 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:43:07.680 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030587677@outlook.com","password":"password123"}
+
+23:43:07.757 [main]  DEBUG com.intuit.karate - response time in milliseconds: 76
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:43:07 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a06d660018","email":"test1637030587677@outlook.com"}}
+23:43:07.764 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030587677@outlook.com","password":"password123"}
+
+23:43:07.832 [main]  DEBUG com.intuit.karate - response time in milliseconds: 66
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:43:07 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a06d660018","email":"test1637030587677@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NzY3N0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4N30.9O-QEaNUvtENXwSn0Es17AT3etLHC_NjBlq-5V6fmOHqRt8n4GSniBMxe4sCoie24Bx8NN9w6sgMuW0lGKd6_Q"}
+23:43:07.841 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NzY3N0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4N30.9O-QEaNUvtENXwSn0Es17AT3etLHC_NjBlq-5V6fmOHqRt8n4GSniBMxe4sCoie24Bx8NN9w6sgMuW0lGKd6_Q
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 25
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:43:08.268 [main]  DEBUG com.intuit.karate - response time in milliseconds: 425
+3 < 201
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:43:08 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d26a06d660018","email":"test1637030587677@outlook.com"}}
+23:43:08.276 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:43:08.279 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26a06d660018",
+    "email": "test1637030587677@outlook.com"
+  }
+}
+ 
+23:43:08.286 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NzY3N0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4N30.9O-QEaNUvtENXwSn0Es17AT3etLHC_NjBlq-5V6fmOHqRt8n4GSniBMxe4sCoie24Bx8NN9w6sgMuW0lGKd6_Q
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:43:08.906 [main]  DEBUG com.intuit.karate - response time in milliseconds: 617
+4 < 200
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:43:08 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"wishlistGameId":12,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:43:08.910 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 12,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:43:08.917 [main]  DEBUG com.intuit.karate - request:
+5 > DELETE http://localhost:8080/wishlist/12
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NzY3N0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4N30.9O-QEaNUvtENXwSn0Es17AT3etLHC_NjBlq-5V6fmOHqRt8n4GSniBMxe4sCoie24Bx8NN9w6sgMuW0lGKd6_Q
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:43:08.946 [main]  DEBUG com.intuit.karate - response time in milliseconds: 27
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:43:08 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"id":12,"gameName":"god of war","user":{"id":"2c9380837d267619017d26a06d660018","name":"test testson","email":"test1637030587677@outlook.com","password":"$2a$10$Gvp2DPA4BC4aU0V/G8Rwku0iCkNH1E89Fu1K5Pdfkat5/7MJLgRm."}}
+23:43:08.949 [main]  INFO  com.intuit.karate - [print] {
+  "id": 12,
+  "gameName": "god of war",
+  "user": {
+    "id": "2c9380837d267619017d26a06d660018",
+    "name": "test testson",
+    "email": "test1637030587677@outlook.com",
+    "password": "$2a$10$Gvp2DPA4BC4aU0V/G8Rwku0iCkNH1E89Fu1K5Pdfkat5/7MJLgRm."
+  }
+}
+ 
+23:43:08.954 [main]  DEBUG com.intuit.karate - request:
+6 > DELETE http://localhost:8080/wishlist/12
+6 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4NzY3N0BvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4N30.9O-QEaNUvtENXwSn0Es17AT3etLHC_NjBlq-5V6fmOHqRt8n4GSniBMxe4sCoie24Bx8NN9w6sgMuW0lGKd6_Q
+6 > Host: localhost:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+6 > Accept-Encoding: gzip,deflate
+
+
+23:43:08.969 [main]  DEBUG com.intuit.karate - response time in milliseconds: 13
+6 < 404
+6 < Vary: Origin
+6 < Vary: Access-Control-Request-Method
+6 < Vary: Access-Control-Request-Headers
+6 < X-Content-Type-Options: nosniff
+6 < X-XSS-Protection: 1; mode=block
+6 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+6 < Pragma: no-cache
+6 < Expires: 0
+6 < X-Frame-Options: DENY
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Tue, 16 Nov 2021 02:43:08 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Wishlist id not found","developerMessage":"The id: 12 doesn't exists on your wishlist","timestamp":"2021-11-16T02:43:08.964+00:00"}
+23:43:08.972 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Wishlist id not found",
+  "developerMessage": "The id: 12 doesn't exists on your wishlist",
+  "timestamp": "2021-11-16T02:43:08.964+00:00"
+}
+ 
+23:43:09.089 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 6 (0 remaining) features/DeleteGameFromWishlist.feature
+23:43:09.097 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:43:09.101 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030589099@outlook.com","password":"password123"}
+
+23:43:09.181 [main]  DEBUG com.intuit.karate - response time in milliseconds: 78
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:43:08 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a072f60019","email":"test1637030589099@outlook.com"}}
+23:43:09.187 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030589099@outlook.com","password":"password123"}
+
+23:43:09.296 [main]  DEBUG com.intuit.karate - response time in milliseconds: 108
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:43:09 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a072f60019","email":"test1637030589099@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4OTA5OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4OX0.b4AlHRNjOUmLIzuG86ACWXcjttUppd1XHnAUB_GoCvM7L_DwuxvPNdBWpsLyaci_6S7_tMdNmdf5914TGLS9RA"}
+23:43:09.315 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/game/title=god%20of%20war
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4OTA5OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4OX0.b4AlHRNjOUmLIzuG86ACWXcjttUppd1XHnAUB_GoCvM7L_DwuxvPNdBWpsLyaci_6S7_tMdNmdf5914TGLS9RA
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:43:09.881 [main]  DEBUG com.intuit.karate - response time in milliseconds: 563
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:43:09 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"game":{"internalName":"GODOFWAR","title":"God of War","metacriticLink":"/game/pc/god-of-war","storeID":"23","gameID":"236053","salePrice":"41.48","normalPrice":"49.99","isOnSale":"1","savings":"17.023405","metacriticScore":"0","steamRatingText":null,"steamRatingPercent":"0","steamRatingCount":"0","steamAppID":"1593500","releaseDate":1642118400,"lastChange":1636387054,"dealRating":"2.3","thumb":"https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"},"stores":[{"storeID":"23","storeName":"GameBillet","isActive":true}]}
+23:43:09.891 [main]  INFO  com.intuit.karate - [print] {
+  "game": {
+    "internalName": "GODOFWAR",
+    "title": "God of War",
+    "metacriticLink": "/game/pc/god-of-war",
+    "storeID": "23",
+    "gameID": "236053",
+    "salePrice": "41.48",
+    "normalPrice": "49.99",
+    "isOnSale": "1",
+    "savings": "17.023405",
+    "metacriticScore": "0",
+    "steamRatingText": null,
+    "steamRatingPercent": "0",
+    "steamRatingCount": "0",
+    "steamAppID": "1593500",
+    "releaseDate": 1642118400,
+    "lastChange": 1636387054,
+    "dealRating": "2.3",
+    "thumb": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/capsule_sm_120.jpg?t=1636735779"
+  },
+  "stores": [
+    {
+      "storeID": "23",
+      "storeName": "GameBillet",
+      "isActive": true
+    }
+  ]
+}
+ 
+23:43:09.901 [main]  DEBUG com.intuit.karate - request:
+4 > GET http://localhost:8080/game/title=god%20of%20wa
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU4OTA5OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ4OX0.b4AlHRNjOUmLIzuG86ACWXcjttUppd1XHnAUB_GoCvM7L_DwuxvPNdBWpsLyaci_6S7_tMdNmdf5914TGLS9RA
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+
+
+23:43:10.191 [main]  DEBUG com.intuit.karate - response time in milliseconds: 286
+4 < 404
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:43:09 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"title":"Not Found","status":404,"details":"Game not found","developerMessage":"Game title not found or mistyped","timestamp":"2021-11-16T02:43:10.188+00:00"}
+23:43:10.195 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Not Found",
+  "status": 404,
+  "details": "Game not found",
+  "developerMessage": "Game title not found or mistyped",
+  "timestamp": "2021-11-16T02:43:10.188+00:00"
+}
+ 
+23:43:10.277 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 6 (0 remaining) features/FindGame.feature
+23:43:10.285 [main]  DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'signUpJson' with new value: read('..\\data\\signUp.json')
+23:43:10.293 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030590289@outlook.com","password":"password123"}
+
+23:43:10.380 [main]  DEBUG com.intuit.karate - response time in milliseconds: 85
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:43:10 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a077a2001a","email":"test1637030590289@outlook.com"}}
+23:43:10.386 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030590289@outlook.com","password":"password123"}
+
+23:43:10.454 [main]  DEBUG com.intuit.karate - response time in milliseconds: 67
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:43:10 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a077a2001a","email":"test1637030590289@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU5MDI4OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ5MH0.dVsNDQilB9N03unNVPkm0IAxUE_eyAk6m70iwe6UT0lq5bSzS3A1wa1_VubffMUhWWQ6yfR8Dg-xcpH7FG1pfg"}
+23:43:10.460 [main]  DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8080/wishlist
+3 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU5MDI4OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ5MH0.dVsNDQilB9N03unNVPkm0IAxUE_eyAk6m70iwe6UT0lq5bSzS3A1wa1_VubffMUhWWQ6yfR8Dg-xcpH7FG1pfg
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+
+
+23:43:10.474 [main]  DEBUG com.intuit.karate - response time in milliseconds: 12
+3 < 200
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Tue, 16 Nov 2021 02:43:10 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+[]
+23:43:10.477 [main]  INFO  com.intuit.karate - [print] [
+]
+ 
+23:43:10.480 [main]  DEBUG com.intuit.karate - request:
+4 > POST http://localhost:8080/wishlist
+4 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU5MDI4OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ5MH0.dVsNDQilB9N03unNVPkm0IAxUE_eyAk6m70iwe6UT0lq5bSzS3A1wa1_VubffMUhWWQ6yfR8Dg-xcpH7FG1pfg
+4 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 25
+4 > Host: localhost:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+4 > Accept-Encoding: gzip,deflate
+{"gameName":"god of war"}
+
+23:43:10.917 [main]  DEBUG com.intuit.karate - response time in milliseconds: 435
+4 < 201
+4 < Vary: Origin
+4 < Vary: Access-Control-Request-Method
+4 < Vary: Access-Control-Request-Headers
+4 < X-Content-Type-Options: nosniff
+4 < X-XSS-Protection: 1; mode=block
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Pragma: no-cache
+4 < Expires: 0
+4 < X-Frame-Options: DENY
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Tue, 16 Nov 2021 02:43:10 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+{"gameName":"god of war","user":{"name":"test testson","id":"2c9380837d267619017d26a077a2001a","email":"test1637030590289@outlook.com"}}
+23:43:10.923 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war"
+}
+ 
+23:43:10.925 [main]  INFO  com.intuit.karate - [print] {
+  "gameName": "god of war",
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26a077a2001a",
+    "email": "test1637030590289@outlook.com"
+  }
+}
+ 
+23:43:10.932 [main]  DEBUG com.intuit.karate - request:
+5 > GET http://localhost:8080/wishlist
+5 > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU5MDI4OUBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ5MH0.dVsNDQilB9N03unNVPkm0IAxUE_eyAk6m70iwe6UT0lq5bSzS3A1wa1_VubffMUhWWQ6yfR8Dg-xcpH7FG1pfg
+5 > Host: localhost:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+5 > Accept-Encoding: gzip,deflate
+
+
+23:43:11.536 [main]  DEBUG com.intuit.karate - response time in milliseconds: 601
+5 < 200
+5 < Vary: Origin
+5 < Vary: Access-Control-Request-Method
+5 < Vary: Access-Control-Request-Headers
+5 < X-Content-Type-Options: nosniff
+5 < X-XSS-Protection: 1; mode=block
+5 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+5 < Pragma: no-cache
+5 < Expires: 0
+5 < X-Frame-Options: DENY
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Tue, 16 Nov 2021 02:43:11 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+[{"wishlistGameId":13,"gameName":"God of War","gamePrice":"41.48","stores":["GameBillet"]}]
+23:43:11.539 [main]  INFO  com.intuit.karate - [print] [
+  {
+    "wishlistGameId": 13,
+    "gameName": "God of War",
+    "gamePrice": "41.48",
+    "stores": [
+      "GameBillet"
+    ]
+  }
+]
+ 
+23:43:11.618 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 4 of 6 (0 remaining) features/GetWishlist.feature
+23:43:11.628 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 88
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test testson","email":"test1637030591624@outlook.com","password":"password123"}
+
+23:43:11.720 [main]  DEBUG com.intuit.karate - response time in milliseconds: 91
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:43:11 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a07cdb001b","email":"test1637030591624@outlook.com"}}
+23:43:11.724 [main]  INFO  com.intuit.karate - [print] {
+  "name": "test testson",
+  "email": "test1637030591624@outlook.com",
+  "password": "password123"
+}
+ 
+23:43:11.727 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26a07cdb001b",
+    "email": "test1637030591624@outlook.com"
+  }
+}
+ 
+23:43:11.730 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637030591624@outlook.com",
+  "password": "password123"
+}
+ 
+23:43:11.733 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signin
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 66
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"email":"test1637030591624@outlook.com","password":"password123"}
+
+23:43:11.849 [main]  DEBUG com.intuit.karate - response time in milliseconds: 114
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:43:11 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"user":{"name":"test testson","id":"2c9380837d267619017d26a07cdb001b","email":"test1637030591624@outlook.com"},"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU5MTYyNEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ5MX0.x6GQXXbGJEMkcmVFGqLX50Kn5aY-c3e7r9K1u6-nHPmBusMmG11Su2ixr0FHVyJk7oKefZMSmfefDjL4_1u-jA"}
+23:43:11.853 [main]  INFO  com.intuit.karate - [print] {
+  "email": "test1637030591624@outlook.com",
+  "password": "password123"
+}
+ 
+23:43:11.854 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "test testson",
+    "id": "2c9380837d267619017d26a07cdb001b",
+    "email": "test1637030591624@outlook.com"
+  },
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MTYzNzAzMDU5MTYyNEBvdXRsb29rLmNvbSIsImV4cCI6MTYzNzAzMTQ5MX0.x6GQXXbGJEMkcmVFGqLX50Kn5aY-c3e7r9K1u6-nHPmBusMmG11Su2ixr0FHVyJk7oKefZMSmfefDjL4_1u-jA"
+}
+ 
+23:43:11.858 [main]  DEBUG com.intuit.karate - request:
+3 > POST http://localhost:8080/auth/signin
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 59
+3 > Host: localhost:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+3 > Accept-Encoding: gzip,deflate
+{"email":"nottest@outlook.com","password":"wrong-password"}
+
+23:43:11.926 [main]  DEBUG com.intuit.karate - response time in milliseconds: 67
+3 < 403
+3 < Vary: Origin
+3 < Vary: Access-Control-Request-Method
+3 < Vary: Access-Control-Request-Headers
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 1; mode=block
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: DENY
+3 < Content-Length: 0
+3 < Date: Tue, 16 Nov 2021 02:43:11 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+
+23:43:12.010 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 5 of 6 (0 remaining) features/Login.feature
+23:43:12.018 [main]  DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/auth/signup
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 85
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637030592015@outlook.com","password":"password123"}
+
+23:43:12.104 [main]  DEBUG com.intuit.karate - response time in milliseconds: 84
+1 < 201
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 1; mode=block
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: DENY
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Tue, 16 Nov 2021 02:43:11 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"user":{"name":"Test user","id":"2c9380837d267619017d26a07e5d001c","email":"test1637030592015@outlook.com"}}
+23:43:12.107 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637030592015@outlook.com",
+  "password": "password123"
+}
+ 
+23:43:12.114 [main]  INFO  com.intuit.karate - [print] {
+  "user": {
+    "name": "Test user",
+    "id": "2c9380837d267619017d26a07e5d001c",
+    "email": "test1637030592015@outlook.com"
+  }
+}
+ 
+23:43:12.118 [main]  DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8080/auth/signup
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 85
+2 > Host: localhost:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+2 > Accept-Encoding: gzip,deflate
+{"name":"Test user","email":"test1637030592015@outlook.com","password":"password123"}
+
+23:43:12.131 [main]  DEBUG com.intuit.karate - response time in milliseconds: 12
+2 < 409
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 1; mode=block
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: DENY
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Tue, 16 Nov 2021 02:43:11 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"title":"Confict","status":409,"details":"Email already exists","developerMessage":"Email already exists on database","timestamp":"2021-11-16T02:43:12.127+00:00"}
+23:43:12.134 [main]  INFO  com.intuit.karate - [print] {
+  "name": "Test user",
+  "email": "test1637030592015@outlook.com",
+  "password": "password123"
+}
+ 
+23:43:12.135 [main]  INFO  com.intuit.karate - [print] {
+  "title": "Confict",
+  "status": 409,
+  "details": "Email already exists",
+  "developerMessage": "Email already exists on database",
+  "timestamp": "2021-11-16T02:43:12.127+00:00"
+}
+ 
+23:43:12.183 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 6 of 6 (0 remaining) features/SignUp.feature
+23:43:12.185 [main]  DEBUG com.intuit.karate.Suite - waiting for 6 features to complete

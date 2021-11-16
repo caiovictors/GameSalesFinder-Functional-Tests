@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/Login[1:16]","start":1637030591623,"end":1637030591927,"title":"features\/Login[1:16] 23:43:11.623-23:43:11.927 Signs in an user and returns an error if it does not exist"},{"id":2,"group":1,"content":"features\/AddGameToWishlist[1:32]","start":1637030585482,"end":1637030587029,"title":"features\/AddGameToWishlist[1:32] 23:43:05.482-23:43:07.029 Add game to wishlist"},{"id":3,"group":1,"content":"features\/GetWishlist[1:32]","start":1637030590283,"end":1637030591540,"title":"features\/GetWishlist[1:32] 23:43:10.283-23:43:11.540 Get empty wishlist, add to wishlist and get wishlist"},{"id":4,"group":1,"content":"features\/DeleteGameFromWishlist[1:32]","start":1637030587672,"end":1637030588974,"title":"features\/DeleteGameFromWishlist[1:32] 23:43:07.672-23:43:08.974 Add to wishlist then get wishlist, delete game by wishlistGameId and try to delete game already deleted"},{"id":5,"group":1,"content":"features\/FindGame[1:35]","start":1637030589095,"end":1637030590196,"title":"features\/FindGame[1:35] 23:43:09.095-23:43:10.196 Find Game"},{"id":6,"group":1,"content":"features\/SignUp[1:11]","start":1637030592014,"end":1637030592138,"title":"features\/SignUp[1:11] 23:43:12.014-23:43:12.138 Creates a new user and return an error if it already exists"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
